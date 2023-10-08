@@ -1,0 +1,24 @@
+{
+  "name": "foodvila",
+  "version": "1.0.0",
+  "description": "A food delivery app",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Sourav Mansingh",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "process": "^0.11.10"
+  }
+}
