@@ -1,14 +1,25 @@
+import { useState } from "react";
+import Logo from "../../static/img/logo.jpg";
+
+
+const loggedInUser = () => {
+    // API call to check authentication
+    return true;
+}
+
 const Title = () =>(
     <a href="/">
     <img
         className="logo"
         alt="logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/8cb220fa3997a3b928d2ffb6c098acaf"
+        src={Logo}
     />
     </a>
 );
 
 const Header = () => {
+    const [isLoggedIn, setIsLoggedIn]  = useState(false);
+
     return (
         <div className="header">
             <Title/>
@@ -20,6 +31,7 @@ const Header = () => {
                     <li>Cart</li>
                 </ul>
             </div>
+            {isLoggedIn ? <button onClick={() => setIsLoggedIn(false)}>Logout</button> : <button onClick={() => setIsLoggedIn(true)}>Login</button>}
         </div>
     );
 };
